@@ -1,5 +1,5 @@
 {% set name = "csv_trimming" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/csv_trimming-{{ version }}.tar.gz
-  sha256: b499dfebc8590146f805ac58c79f889f3b0275fc851d817df470ccccaba636d1
+  sha256: 17fa6a276a6a0e9c0eadd328ecf1947e638f580515870f351d32a225026b7ab3
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - pandas
     - scipy
     - numpy
+    - ugly_csv_generator >=1.1.4
 
 test:
   imports:
